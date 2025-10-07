@@ -1,0 +1,888 @@
+"use client";
+
+import React from "react";
+import { Accordion } from "@/ui/components/Accordion";
+import { Alert } from "@/ui/components/Alert";
+import { Avatar } from "@/ui/components/Avatar";
+import { Badge } from "@/ui/components/Badge";
+import { Button } from "@/ui/components/Button";
+import { IconButton } from "@/ui/components/IconButton";
+import { IconWithBackground } from "@/ui/components/IconWithBackground";
+import { LinkButton } from "@/ui/components/LinkButton";
+import { Progress } from "@/ui/components/Progress";
+import { Stepper } from "@/ui/components/Stepper";
+import { TextField } from "@/ui/components/TextField";
+import { FeatherCheckCircle } from "@subframe/core";
+import { FeatherDollarSign } from "@subframe/core";
+import { FeatherEdit3 } from "@subframe/core";
+import { FeatherFileText } from "@subframe/core";
+import { FeatherGlobe } from "@subframe/core";
+import { FeatherMail } from "@subframe/core";
+import { FeatherMapPin } from "@subframe/core";
+import { FeatherMessageCircle } from "@subframe/core";
+import { FeatherPackage } from "@subframe/core";
+import { FeatherPhone } from "@subframe/core";
+import { FeatherSearch } from "@subframe/core";
+import { FeatherShield } from "@subframe/core";
+import { FeatherStar } from "@subframe/core";
+
+function SyrianDocsHub() {
+  return (
+    <div className="flex h-full w-full flex-col items-start bg-default-background">
+      <div className="flex w-full items-center justify-between border-b border-solid border-neutral-border bg-default-background px-6 py-4 shadow-sm sticky top-0 z-50">
+        <div className="flex items-center gap-6">
+          <span className="text-heading-2 font-heading-2 text-default-font">
+            رؤيا‑تخليص
+          </span>
+          <TextField
+            className="h-auto w-80 flex-none mobile:hidden"
+            variant="filled"
+            label=""
+            helpText=""
+            icon={<FeatherSearch />}
+          >
+            <TextField.Input
+              placeholder="ابحث عن الوثيقة أو الخدمة…"
+              value=""
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {}}
+            />
+          </TextField>
+        </div>
+        <div className="flex items-center gap-4">
+          <LinkButton
+            className="mobile:hidden"
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+          >
+            الرئيسية
+          </LinkButton>
+          <LinkButton
+            className="mobile:hidden"
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+          >
+            الخدمات
+          </LinkButton>
+          <LinkButton
+            className="mobile:hidden"
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+          >
+            من نحن
+          </LinkButton>
+          <Button
+            variant="neutral-secondary"
+            size="small"
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+          >
+            English
+          </Button>
+          <Button
+            icon={<FeatherMessageCircle />}
+            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+          >
+            تواصل معنا
+          </Button>
+        </div>
+      </div>
+      <div className="flex w-full flex-col items-center bg-default-background">
+        <div className="flex w-full flex-col items-center justify-center overflow-hidden px-6 py-32 relative mobile:px-6 mobile:py-20">
+          <img
+            className="w-full grow shrink-0 basis-0 object-cover absolute inset-0 opacity-10"
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80"
+          />
+          <div className="container flex w-full max-w-[1024px] flex-col items-center gap-8 relative z-10 text-center">
+            <Badge icon={<FeatherShield />}>خدمة موثوقة منذ سنوات</Badge>
+            <span className="w-full font-['Inter'] text-[56px] font-[600] leading-[62px] text-default-font -tracking-[0.04em] mobile:font-['Afacad_Flux'] mobile:text-[32px] mobile:font-[400] mobile:leading-[40px] mobile:tracking-normal">
+              سهل معاملاتك السورية بسرعة وموثوقية تامة
+            </span>
+            <span className="w-full max-w-[768px] font-['Inter'] text-[21px] font-[500] leading-[28px] text-subtext-color -tracking-[0.03em] mobile:font-['Afacad_Flux'] mobile:text-[17px] mobile:font-[400] mobile:leading-[24px] mobile:tracking-normal">
+              خدمة قانونية مرخّصة لاستخراج وتصديق وترجمة الوثائق الرسمية مع شحن
+              عالمي في أيام معدودة
+            </span>
+            <Button
+              size="large"
+              icon={<FeatherFileText />}
+              onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+            >
+              ابدأ الآن واحصل على وثيقتك الرسمية
+            </Button>
+            <div className="flex w-full items-center justify-center gap-6 mobile:flex-col mobile:flex-nowrap mobile:gap-3">
+              <div className="flex items-center gap-2">
+                <FeatherCheckCircle className="text-body font-body text-success-700" />
+                <span className="text-caption font-caption text-subtext-color">
+                  تسليم عالمي في 3-10 أيام
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FeatherCheckCircle className="text-body font-body text-success-700" />
+                <span className="text-caption font-caption text-subtext-color">
+                  تصديق رسمي معتمد
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FeatherCheckCircle className="text-body font-body text-success-700" />
+                <span className="text-caption font-caption text-subtext-color">
+                  أسعار شفافة وواضحة
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-16 bg-gradient-to-b from-neutral-50 to-transparent">
+          <div className="container flex w-full max-w-[1024px] flex-col items-center gap-8">
+            <div className="flex w-full items-center justify-center gap-4 rounded-lg border border-solid border-brand-600 bg-brand-50 px-8 py-6">
+              <IconWithBackground size="large" icon={<FeatherShield />} />
+              <div className="flex flex-col items-start gap-1">
+                <span className="text-heading-3 font-heading-3 text-default-font">
+                  مكتب مرخّص رسميًا في سوريا
+                </span>
+                <span className="text-body font-body text-subtext-color">
+                  رخصة رقم: 2024-SY-DOCS-1547 | وزارة الاقتصاد والتجارة الخارجية
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center gap-16 bg-default-background px-6 py-24">
+          <div className="container flex w-full max-w-[1280px] flex-col items-start gap-12">
+            <div className="flex w-full flex-col items-start gap-4">
+              <span className="text-heading-2 font-heading-2 text-default-font">
+                الخدمات الأكثر طلبًا
+              </span>
+              <div className="flex w-full items-center gap-4 mobile:flex-col mobile:flex-nowrap mobile:items-start mobile:justify-start mobile:gap-4">
+                <TextField
+                  className="h-auto grow shrink-0 basis-0"
+                  variant="filled"
+                  label=""
+                  helpText=""
+                  icon={<FeatherSearch />}
+                >
+                  <TextField.Input
+                    placeholder="ابحث عن خدمة..."
+                    value=""
+                    onChange={(
+                      event: React.ChangeEvent<HTMLInputElement>
+                    ) => {}}
+                  />
+                </TextField>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="neutral-secondary"
+                    size="small"
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  >
+                    كل الخدمات
+                  </Button>
+                  <Button
+                    variant="neutral-secondary"
+                    size="small"
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  >
+                    أحوال مدنية
+                  </Button>
+                  <Button
+                    variant="neutral-secondary"
+                    size="small"
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  >
+                    قضائي
+                  </Button>
+                  <Button
+                    variant="neutral-secondary"
+                    size="small"
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  >
+                    عقارات
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className="flex w-full flex-wrap items-start gap-4">
+              <div className="flex min-w-[320px] grow shrink-0 basis-0 flex-col items-start gap-4 overflow-hidden rounded-lg border border-solid border-neutral-border bg-default-background transition-shadow cursor-pointer">
+                <div className="flex w-full flex-col items-start gap-3 px-6 py-6">
+                  <div className="flex w-full items-start justify-between">
+                    <IconWithBackground
+                      size="medium"
+                      icon={<FeatherFileText />}
+                    />
+                    <Badge variant="success">متوفر</Badge>
+                  </div>
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    إخراج قيد فردي
+                  </span>
+                  <span className="text-body font-body text-subtext-color">
+                    استخراج قيد فردي من السجل المدني مع التصديق الكامل
+                  </span>
+                  <div className="flex w-full items-center justify-between border-t border-solid border-neutral-border pt-3">
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-caption font-caption text-subtext-color">
+                        السعر من
+                      </span>
+                      <span className="text-body-bold font-body-bold text-default-font">
+                        $45
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-caption font-caption text-subtext-color">
+                        المدة
+                      </span>
+                      <span className="text-body-bold font-body-bold text-default-font">
+                        7-10 أيام
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  className="h-8 w-full flex-none"
+                  variant="brand-secondary"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  طلب الخدمة
+                </Button>
+              </div>
+              <div className="flex min-w-[320px] grow shrink-0 basis-0 flex-col items-start gap-4 overflow-hidden rounded-lg border border-solid border-neutral-border bg-default-background transition-shadow cursor-pointer">
+                <div className="flex w-full flex-col items-start gap-3 px-6 py-6">
+                  <div className="flex w-full items-start justify-between">
+                    <IconWithBackground
+                      size="medium"
+                      icon={<FeatherShield />}
+                    />
+                    <Badge variant="success">متوفر</Badge>
+                  </div>
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    لا حُكم عليه
+                  </span>
+                  <span className="text-body font-body text-subtext-color">
+                    بيان عدم محكومية من السجل القضائي مع تصديق العدل
+                  </span>
+                  <div className="flex w-full items-center justify-between border-t border-solid border-neutral-border pt-3">
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-caption font-caption text-subtext-color">
+                        السعر من
+                      </span>
+                      <span className="text-body-bold font-body-bold text-default-font">
+                        $55
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-caption font-caption text-subtext-color">
+                        المدة
+                      </span>
+                      <span className="text-body-bold font-body-bold text-default-font">
+                        10-14 يوم
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  className="h-8 w-full flex-none"
+                  variant="brand-secondary"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  طلب الخدمة
+                </Button>
+              </div>
+              <div className="flex min-w-[320px] grow shrink-0 basis-0 flex-col items-start gap-4 overflow-hidden rounded-lg border border-solid border-neutral-border bg-default-background transition-shadow cursor-pointer">
+                <div className="flex w-full flex-col items-start gap-3 px-6 py-6">
+                  <div className="flex w-full items-start justify-between">
+                    <IconWithBackground size="medium" icon={<FeatherGlobe />} />
+                    <Badge variant="success">متوفر</Badge>
+                  </div>
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    ترجمة محلّفة
+                  </span>
+                  <span className="text-body font-body text-subtext-color">
+                    ترجمة رسمية لجميع اللغات مع تصديق وزارة العدل
+                  </span>
+                  <div className="flex w-full items-center justify-between border-t border-solid border-neutral-border pt-3">
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-caption font-caption text-subtext-color">
+                        السعر من
+                      </span>
+                      <span className="text-body-bold font-body-bold text-default-font">
+                        $35
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-start gap-1">
+                      <span className="text-caption font-caption text-subtext-color">
+                        المدة
+                      </span>
+                      <span className="text-body-bold font-body-bold text-default-font">
+                        5-7 أيام
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  className="h-8 w-full flex-none"
+                  variant="brand-secondary"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  طلب الخدمة
+                </Button>
+              </div>
+            </div>
+            <div className="flex w-full items-center justify-center">
+              <Button
+                size="large"
+                icon={<FeatherFileText />}
+                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+              >
+                استخرج وثيقتك اليوم
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-16 px-6 py-32 bg-gradient-to-b from-transparent via-neutral-100 to-transparent">
+          <div className="container flex w-full max-w-[1024px] flex-col items-center gap-12">
+            <div className="flex w-full flex-col items-center gap-4">
+              <span className="text-heading-2 font-heading-2 text-default-font text-center">
+                آراء العملاء
+              </span>
+              <span className="text-body font-body text-subtext-color text-center">
+                ثقة آلاف العملاء حول العالم
+              </span>
+            </div>
+            <div className="flex w-full flex-wrap items-start gap-6">
+              <div className="flex min-w-[320px] grow shrink-0 basis-0 flex-col items-start gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex w-full items-start gap-4">
+                  <Avatar
+                    size="large"
+                    image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                  >
+                    م
+                  </Avatar>
+                  <div className="flex flex-col items-start gap-1">
+                    <span className="text-body-bold font-body-bold text-default-font">
+                      محمد العلي
+                    </span>
+                    <span className="text-caption font-caption text-subtext-color">
+                      ألمانيا
+                    </span>
+                  </div>
+                </div>
+                <span className="text-body font-body text-default-font">
+                  خدمة ممتازة وسريعة. استخرجت قيد فردي وبيان لا حكم وصلني
+                  بألمانيا في أقل من أسبوعين. كل الوثائق مصدقة ومقبولة من
+                  السلطات الألمانية.
+                </span>
+                <div className="flex items-center gap-1">
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                </div>
+              </div>
+              <div className="flex min-w-[320px] grow shrink-0 basis-0 flex-col items-start gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex w-full items-start gap-4">
+                  <Avatar
+                    size="large"
+                    image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+                  >
+                    ر
+                  </Avatar>
+                  <div className="flex flex-col items-start gap-1">
+                    <span className="text-body-bold font-body-bold text-default-font">
+                      رنا الخطيب
+                    </span>
+                    <span className="text-caption font-caption text-subtext-color">
+                      كندا
+                    </span>
+                  </div>
+                </div>
+                <span className="text-body font-body text-default-font">
+                  احترافية عالية وأسعار معقولة. تواصل دائم وشرح واضح لكل
+                  الخطوات. أنصح بهم بشدة لكل من يحتاج وثائق رسمية من سوريا.
+                </span>
+                <div className="flex items-center gap-1">
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                </div>
+              </div>
+              <div className="flex min-w-[320px] grow shrink-0 basis-0 flex-col items-start gap-4 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex w-full items-start gap-4">
+                  <Avatar
+                    size="large"
+                    image="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+                  >
+                    ع
+                  </Avatar>
+                  <div className="flex flex-col items-start gap-1">
+                    <span className="text-body-bold font-body-bold text-default-font">
+                      عمر السيد
+                    </span>
+                    <span className="text-caption font-caption text-subtext-color">
+                      السويد
+                    </span>
+                  </div>
+                </div>
+                <span className="text-body font-body text-default-font">
+                  وفّروا علي الكثير من الوقت والجهد. الوثائق وصلت مصدقة من
+                  الخارجية والعدل تمامًا كما طلبت. خدمة موثوقة 100%.
+                </span>
+                <div className="flex items-center gap-1">
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                  <FeatherStar className="text-body font-body text-warning-600" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-16 bg-default-background px-6 py-24">
+          <div className="container flex w-full max-w-[1024px] flex-col items-center gap-12">
+            <div className="flex w-full flex-col items-center gap-4">
+              <span className="text-heading-2 font-heading-2 text-default-font text-center">
+                أسعار شفافة وواضحة
+              </span>
+              <span className="text-body font-body text-subtext-color text-center">
+                تشمل جميع الرسوم والتصديقات والترجمة
+              </span>
+            </div>
+            <div className="flex w-full flex-col items-start gap-2 overflow-hidden rounded-lg border border-solid border-neutral-border bg-default-background shadow-md">
+              <div className="flex w-full items-center gap-4 border-b border-solid border-neutral-border bg-neutral-50 px-6 py-4">
+                <span className="grow shrink-0 basis-0 text-body-bold font-body-bold text-default-font">
+                  نوع الخدمة
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-default-font text-center">
+                  الرسوم الأساسية
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-default-font text-center">
+                  التصديقات
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-default-font text-center">
+                  الشحن الدولي
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-default-font text-center">
+                  المجموع
+                </span>
+              </div>
+              <div className="flex w-full items-center gap-4 border-b border-solid border-neutral-border px-6 py-4">
+                <span className="grow shrink-0 basis-0 text-body font-body text-default-font">
+                  إخراج قيد فردي
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $15
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $20
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $10
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-brand-primary text-center">
+                  $45
+                </span>
+              </div>
+              <div className="flex w-full items-center gap-4 border-b border-solid border-neutral-border px-6 py-4">
+                <span className="grow shrink-0 basis-0 text-body font-body text-default-font">
+                  بيان لا حُكم عليه
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $20
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $25
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $10
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-brand-primary text-center">
+                  $55
+                </span>
+              </div>
+              <div className="flex w-full items-center gap-4 border-b border-solid border-neutral-border px-6 py-4">
+                <span className="grow shrink-0 basis-0 text-body font-body text-default-font">
+                  ترجمة محلّفة
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $25
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $0
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $10
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-brand-primary text-center">
+                  $35
+                </span>
+              </div>
+              <div className="flex w-full items-center gap-4 px-6 py-4">
+                <span className="grow shrink-0 basis-0 text-body font-body text-default-font">
+                  تصديق خارجية + عدل
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $30
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $0
+                </span>
+                <span className="w-32 flex-none text-body font-body text-subtext-color text-center">
+                  $10
+                </span>
+                <span className="w-32 flex-none text-body-bold font-body-bold text-brand-primary text-center">
+                  $40
+                </span>
+              </div>
+            </div>
+            <Alert
+              title="ملاحظة"
+              description="الأسعار تقريبية وقد تختلف حسب نوع الوثيقة والتصديقات المطلوبة ووجهة الشحن. سنزودك بعرض سعر دقيق بعد مراجعة طلبك."
+            />
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-16 px-6 py-32 bg-gradient-to-b from-transparent via-neutral-100 to-transparent">
+          <div className="container flex w-full max-w-[1024px] flex-col items-center gap-12">
+            <div className="flex w-full flex-col items-center gap-4">
+              <span className="text-heading-2 font-heading-2 text-default-font text-center">
+                كيف تعمل الخدمة؟
+              </span>
+              <span className="text-body font-body text-subtext-color text-center">
+                أربع خطوات بسيطة للحصول على وثائقك
+              </span>
+            </div>
+            <div className="flex w-full flex-col items-start gap-8">
+              <Progress value={75} />
+              <Stepper>
+                <Stepper.Step
+                  variant="completed"
+                  firstStep={true}
+                  stepNumber="1"
+                  label="املأ الطلب أونلاين"
+                />
+                <Stepper.Step
+                  variant="completed"
+                  stepNumber="2"
+                  label="راجع السعر والمدة"
+                />
+                <Stepper.Step
+                  variant="completed"
+                  stepNumber="3"
+                  label="إنجاز وتوثيق الوثيقة"
+                />
+                <Stepper.Step
+                  variant="active"
+                  lastStep={true}
+                  stepNumber="4"
+                  label="شحن وتسليم"
+                />
+              </Stepper>
+            </div>
+            <div className="flex w-full flex-wrap items-start gap-6">
+              <div className="flex min-w-[240px] grow shrink-0 basis-0 flex-col items-start gap-3 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <IconWithBackground size="medium" icon={<FeatherEdit3 />} />
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    املأ الطلب
+                  </span>
+                </div>
+                <span className="text-body font-body text-subtext-color">
+                  حدد الوثائق المطلوبة واملأ البيانات الأساسية
+                </span>
+              </div>
+              <div className="flex min-w-[240px] grow shrink-0 basis-0 flex-col items-start gap-3 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <IconWithBackground
+                    size="medium"
+                    icon={<FeatherDollarSign />}
+                  />
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    اقبل السعر
+                  </span>
+                </div>
+                <span className="text-body font-body text-subtext-color">
+                  نزودك بعرض سعر شامل مع المدة المتوقعة
+                </span>
+              </div>
+              <div className="flex min-w-[240px] grow shrink-0 basis-0 flex-col items-start gap-3 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <IconWithBackground
+                    size="medium"
+                    icon={<FeatherCheckCircle />}
+                  />
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    نُنجز الوثيقة
+                  </span>
+                </div>
+                <span className="text-body font-body text-subtext-color">
+                  نستخرج ونصدّق الوثائق من الجهات الرسمية
+                </span>
+              </div>
+              <div className="flex min-w-[240px] grow shrink-0 basis-0 flex-col items-start gap-3 rounded-lg border border-solid border-neutral-border bg-default-background px-6 py-6 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <IconWithBackground size="medium" icon={<FeatherPackage />} />
+                  <span className="text-heading-3 font-heading-3 text-default-font">
+                    نشحن لك
+                  </span>
+                </div>
+                <span className="text-body font-body text-subtext-color">
+                  شحن عالمي سريع وآمن مع إمكانية التتبع
+                </span>
+              </div>
+            </div>
+            <Button
+              size="large"
+              icon={<FeatherFileText />}
+              onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+            >
+              استخرج وثيقتك اليوم
+            </Button>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-16 bg-default-background px-6 py-24">
+          <div className="container flex w-full max-w-[768px] flex-col items-start gap-8">
+            <span className="w-full text-heading-2 font-heading-2 text-default-font text-center">
+              الأسئلة الشائعة
+            </span>
+            <div className="flex w-full flex-col items-start gap-4">
+              <Accordion
+                trigger={
+                  <div className="flex w-full items-center gap-2 px-6 py-5">
+                    <span className="grow shrink-0 basis-0 text-body-bold font-body-bold text-default-font">
+                      هل يمكنني الاكتفاء بملف PDF؟
+                    </span>
+                    <Accordion.Chevron />
+                  </div>
+                }
+                defaultOpen={true}
+              >
+                <div className="flex w-full grow shrink-0 basis-0 flex-col items-start gap-2 px-6 pb-6">
+                  <span className="text-body font-body text-default-font">
+                    يعتمد على الجهة المستفيدة. كثير من الجهات الدولية تشترط
+                    الأصل المصدّق. نوفر PDF للمراجعة الأولية ونرسل الأصل بالبريد
+                    عند الحاجة. سنوضح لك المتطلبات بناءً على وجهتك.
+                  </span>
+                </div>
+              </Accordion>
+              <Accordion
+                trigger={
+                  <div className="flex w-full items-center gap-2 border-t border-solid border-neutral-border px-6 py-5">
+                    <span className="grow shrink-0 basis-0 text-body-bold font-body-bold text-default-font">
+                      ما المدة المعتادة للحصول على الوثائق؟
+                    </span>
+                    <Accordion.Chevron />
+                  </div>
+                }
+              >
+                <div className="flex w-full grow shrink-0 basis-0 flex-col items-start gap-2 px-6 pb-6">
+                  <span className="text-body font-body text-default-font">
+                    تختلف المدة حسب نوع الوثيقة والتصديقات المطلوبة ووجهة الشحن.
+                    عادةً ما بين 7-21 يومًا للخدمة العادية و3-10 أيام للخدمة
+                    المستعجلة. سنزودك بتقدير دقيق عند قبول طلبك.
+                  </span>
+                </div>
+              </Accordion>
+              <Accordion
+                trigger={
+                  <div className="flex w-full items-center gap-2 border-t border-solid border-neutral-border px-6 py-5">
+                    <span className="grow shrink-0 basis-0 text-body-bold font-body-bold text-default-font">
+                      كيف يتم التسليم وهل يمكن تتبع الشحنة؟
+                    </span>
+                    <Accordion.Chevron />
+                  </div>
+                }
+              >
+                <div className="flex w-full grow shrink-0 basis-0 flex-col items-start gap-2 px-6 pb-6">
+                  <span className="text-body font-body text-default-font">
+                    نستخدم شركات الشحن الدولية الموثوقة مثل DHL و FedEx. ستحصل
+                    على رقم تتبع فور شحن الوثائق لمتابعة موقع الشحنة بشكل فوري
+                    حتى وصولها إلى عنوانك.
+                  </span>
+                </div>
+              </Accordion>
+              <Accordion
+                trigger={
+                  <div className="flex w-full items-center gap-2 border-t border-solid border-neutral-border px-6 py-5">
+                    <span className="grow shrink-0 basis-0 text-body-bold font-body-bold text-default-font">
+                      هل الأسعار المعروضة نهائية؟
+                    </span>
+                    <Accordion.Chevron />
+                  </div>
+                }
+              >
+                <div className="flex w-full grow shrink-0 basis-0 flex-col items-start gap-2 px-6 pb-6">
+                  <span className="text-body font-body text-default-font">
+                    الأسعار المعروضة تقديرية وشاملة للرسوم الأساسية والتصديقات
+                    والشحن. قد تختلف قليلاً حسب التفاصيل المحددة لطلبك. سنزودك
+                    بعرض سعر نهائي وشامل قبل البدء بالعمل.
+                  </span>
+                </div>
+              </Accordion>
+              <Accordion
+                trigger={
+                  <div className="flex w-full items-center gap-2 border-t border-solid border-neutral-border px-6 py-5">
+                    <span className="grow shrink-0 basis-0 text-body-bold font-body-bold text-default-font">
+                      هل خدمتكم مرخّصة رسميًا؟
+                    </span>
+                    <Accordion.Chevron />
+                  </div>
+                }
+              >
+                <div className="flex w-full grow shrink-0 basis-0 flex-col items-start gap-2 px-6 pb-6">
+                  <span className="text-body font-body text-default-font">
+                    نعم، نحن مكتب مرخّص رسميًا من وزارة الاقتصاد والتجارة
+                    الخارجية في سوريا برخصة رقم 2024-SY-DOCS-1547. جميع
+                    معاملاتنا قانونية ومعتمدة.
+                  </span>
+                </div>
+              </Accordion>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-8 bg-brand-600 px-6 py-16">
+          <div className="container flex w-full max-w-[1024px] flex-col items-center gap-8">
+            <span className="text-heading-2 font-heading-2 text-black text-center">
+              ابدأ طلبك الآن
+            </span>
+            <span className="w-full max-w-[576px] text-body font-body text-black text-center">
+              املأ النموذج وسنتواصل معك خلال 24 ساعة بعرض سعر شامل ومدة إنجاز
+              دقيقة
+            </span>
+            <div className="flex items-center gap-4">
+              <Button
+                size="large"
+                icon={<FeatherFileText />}
+                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+              >
+                استخرج وثيقتك اليوم
+              </Button>
+              <Button
+                variant="neutral-secondary"
+                size="large"
+                icon={<FeatherMessageCircle />}
+                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+              >
+                تحدث معنا
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-center justify-center gap-12 bg-default-background px-6 py-16">
+          <div className="container flex w-full max-w-[1024px] flex-col items-start gap-8">
+            <div className="flex w-full flex-wrap items-start justify-between mobile:flex-col mobile:flex-wrap mobile:justify-between">
+              <div className="flex min-w-[240px] flex-col items-start gap-4">
+                <span className="text-heading-3 font-heading-3 text-default-font">
+                  رؤيا‑تخليص
+                </span>
+                <span className="text-body font-body text-subtext-color">
+                  خدمة قانونية مرخّصة لاستخراج وتصديق الوثائق الرسمية السورية
+                </span>
+                <div className="flex items-center gap-2">
+                  <IconButton
+                    icon={<FeatherPhone />}
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  />
+                  <IconButton
+                    icon={<FeatherMail />}
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  />
+                  <IconButton
+                    icon={<FeatherMessageCircle />}
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                  />
+                </div>
+              </div>
+              <div className="flex min-w-[160px] flex-col items-start gap-3">
+                <span className="text-body-bold font-body-bold text-default-font">
+                  الخدمات
+                </span>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  أحوال مدنية
+                </LinkButton>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  قضائي وإداري
+                </LinkButton>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  عقارات وأملاك
+                </LinkButton>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  ترجمة وتوثيق
+                </LinkButton>
+              </div>
+              <div className="flex min-w-[160px] flex-col items-start gap-3">
+                <span className="text-body-bold font-body-bold text-default-font">
+                  معلومات
+                </span>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  من نحن
+                </LinkButton>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  الأسئلة الشائعة
+                </LinkButton>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  سياسة الخصوصية
+                </LinkButton>
+                <LinkButton
+                  size="small"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                >
+                  شروط الخدمة
+                </LinkButton>
+              </div>
+              <div className="flex min-w-[240px] flex-col items-start gap-3">
+                <span className="text-body-bold font-body-bold text-default-font">
+                  تواصل معنا
+                </span>
+                <div className="flex items-center gap-2">
+                  <FeatherPhone className="text-body font-body text-subtext-color" />
+                  <span className="text-body font-body text-subtext-color">
+                    +963-XXX-XXXX
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FeatherMail className="text-body font-body text-subtext-color" />
+                  <span className="text-body font-body text-subtext-color">
+                    info@ruyaa-capital.com
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FeatherMapPin className="text-body font-body text-subtext-color" />
+                  <span className="text-body font-body text-subtext-color">
+                    دمشق، سوريا
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex h-px w-full flex-none flex-col items-center gap-2 bg-neutral-border" />
+            <div className="flex w-full items-center justify-between mobile:flex-col mobile:flex-nowrap mobile:gap-4">
+              <span className="text-caption font-caption text-subtext-color">
+                © 2024 رؤيا‑تخليص. جميع الحقوق محفوظة.
+              </span>
+              <span className="text-caption font-caption text-subtext-color">
+                رخصة رقم: 2024-SY-DOCS-1547
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default SyrianDocsHub;
